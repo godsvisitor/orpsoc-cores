@@ -233,7 +233,7 @@ assign or1k_rst = wb_rst | or1k_dbg_rst;
 
 `ifdef OR1200
 
-or1200_top #(.boot_adr(32'hf0000100))
+or1200_top #(.boot_adr(32'hf0000000))
 or1200_top0 (
 	// Instruction bus, clocks, reset
 	.iwb_clk_i			(wb_clk),
@@ -331,7 +331,7 @@ mor1kx #(
 	.IBUS_WB_TYPE("B3_REGISTERED_FEEDBACK"),
 	.DBUS_WB_TYPE("B3_REGISTERED_FEEDBACK"),
 	.OPTION_CPU0("CAPPUCCINO"),
-	.OPTION_RESET_PC(32'hf0000100)
+	.OPTION_RESET_PC(32'hf0000000)
 ) mor1kx0 (
 	.iwbm_adr_o(wb_m2s_or1k_i_adr),
 	.iwbm_stb_o(wb_m2s_or1k_i_stb),
